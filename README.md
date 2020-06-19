@@ -58,3 +58,7 @@ run `.train.sh` and training will start.
 #### Inference
 
 run `python3 Image_inference.py -i img.jpb -o output.jpg` for inference of a single image.
+
+#### Issue
+
+1. if faced opencv issue while compiling with `make command` use `sudo apt install libopencv-dev`. It will solve the opencv error.

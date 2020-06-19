@@ -55,10 +55,15 @@ run `.train.sh` and training will start.
    * (file `yolo-obj_last.weights` will be saved to the `backup\` for each 100 iterations)
    * (file `yolo-obj_xxxx.weights` will be saved to the `backup\` for each 1000 iterations)
 
+   * If stopped training at a particular point you could always restart training from there by making minor change to the `train.sh` file. Give the previous saved weights instead of the pretrained weight. and execute the script again.
+   ```
+   ./darknet detector train data/obj.data cfg/yolo-obj.cfg backup/yolo-obj_xxxx.weights -dont_show
+   ```
+
 #### Inference
 
 run `python3 Image_inference.py -i img.jpb -o output.jpg` for inference of a single image.
 
 #### Issue
 
-1. if faced opencv issue while compiling with `make command` use `sudo apt install libopencv-dev`. It will solve the opencv error.
+1. if faced with opencv issue while compiling with `make` command use `sudo apt install libopencv-dev`. It will solve the opencv error.
